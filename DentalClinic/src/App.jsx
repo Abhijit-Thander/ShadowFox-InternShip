@@ -1,0 +1,36 @@
+import React, { useEffect } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import AppLayout from "./components/layout/AppLayout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Treatments from "./pages/Treatments";
+import FaqS from "./pages/FaqS";
+import Contact from "./pages/Contact";
+import Lenis from "lenis";
+
+const App = () => {
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 1.2,
+  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //   });
+  // }, []);
+
+  const route = createBrowserRouter([
+    {
+      path: "/",
+      element: <AppLayout />,
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "/about", element: <About /> },
+        { path: "/treatments", element: <Treatments /> },
+        { path: "/FAQs", element: <FaqS /> },
+        { path: "/contact", element: <Contact /> },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={route} />;
+};
+
+export default App;

@@ -1,0 +1,215 @@
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { MapPin, Mail, Phone, Clock } from "lucide-react";
+
+const Footer = () => {
+  const quickLinks = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Treatments", href: "/treatments" },
+    { label: "Privacy Policy", href: "/privacy" },
+  ];
+
+  const treatments = [
+    { label: "Teeth Cleaning", href: "/treatments#cleaning" },
+    { label: "Dental Implants", href: "/treatments#implants" },
+    { label: "Root Canal", href: "/treatments#rct" },
+    { label: "Orthodontics", href: "/treatments#braces" },
+    { label: "Laser Dentistry", href: "/treatments#laser" },
+    { label: "Clear Aligners", href: "/treatments#aligners" },
+  ];
+
+  const contactInfo = [
+    {
+      icon: <MapPin size={16} className="mt-0.5 shrink-0 text-blue-400" />,
+      text: "B2/8, SBM Layout, Anthivadi, Hosur, Tamil Nadu 635109, India",
+    },
+    {
+      icon: <Mail size={16} className="mt-0.5 shrink-0 text-blue-400" />,
+      text: "info@sakthidentalclinic.in",
+    },
+    {
+      icon: <Phone size={16} className="mt-0.5 shrink-0 text-blue-400" />,
+      text: "+91 9862890897 / +91 9363298118",
+    },
+    {
+      icon: <Clock size={16} className="mt-0.5 shrink-0 text-blue-400" />,
+      text: (
+        <>
+          <span className="text-white font-medium">Sun – Sat</span>
+          <br />
+          9:00 AM – 7:00 PM
+        </>
+      ),
+    },
+  ];
+
+  const socialLinks = [
+    {
+      icon: <FaFacebookF size={14} />,
+      href: "#",
+      label: "Facebook",
+    },
+    {
+      icon: <FaInstagram size={14} />,
+      href: "#",
+      label: "Instagram",
+    },
+    {
+      icon: <FaYoutube size={14} />,
+      href: "#",
+      label: "YouTube",
+    },
+  ];
+
+  return (
+    <footer className="bg-[#1A2744] text-white">
+      {/* ── Top CTA strip ─────────────────────────────────── */}
+      {/* <div className="bg-linear-to-r from-[#3B82C4] to-[#2563A8] px-6 py-5">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <p className="text-white font-semibold text-base">
+              Ready for a healthier smile?
+            </p>
+            <p className="text-blue-100 text-sm mt-0.5">
+              Book your appointment today — same-day slots available.
+            </p>
+          </div>
+          <a
+            href="/contact"
+            className="shrink-0 bg-white text-[#3B82C4] font-semibold text-sm
+                       px-6 py-2.5 rounded-full hover:bg-blue-50 transition-colors"
+          >
+            Fix an Appointment →
+          </a>
+        </div>
+      </div> */}
+
+      {/* ── Main footer grid ───────────────────────────────── */}
+      <div className="max-w-6xl mx-auto px-6 pt-14 pb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Col 1 — Brand */}
+          <div className="lg:col-span-1">
+            {/* Logo */}
+            <div className="flex items-center gap-3 mb-4">
+              <div
+                className="w-10 h-10 rounded-full flex items-center justify-center text-lg
+                           bg-linear-to-br from-[#3B82C4] to-[#E07AA0] shrink-0"
+              >
+                🦷
+              </div>
+              <div className="leading-tight">
+                <strong className="block text-white font-semibold text-[15px]">
+                  Sakthi Dental Clinic
+                </strong>
+                <span className="text-blue-300 text-xs">Hosur, Tamil Nadu</span>
+              </div>
+            </div>
+
+            {/* Tagline */}
+            <p className="text-slate-400 text-sm leading-relaxed max-w-55">
+              Premium dental care for women, children & families — with
+              compassion and modern technology.
+            </p>
+
+            {/* Social icons */}
+            <div className="flex gap-2.5 mt-5">
+              {socialLinks.map(({ icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="w-9 h-9 rounded-lg bg-white/10 border border-white/15
+                             flex items-center justify-center text-slate-300
+                             hover:bg-[#3B82C4] hover:border-[#3B82C4] hover:text-white
+                             transition-all duration-200"
+                >
+                  {icon}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Col 2 — Quick Links */}
+          <div>
+            <h4 className="text-white text-sm font-semibold mb-5 tracking-wide">
+              Quick Links
+            </h4>
+            <ul className="flex flex-col gap-3">
+              {quickLinks.map(({ label, href }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    className="text-slate-400 text-sm hover:text-white
+                               hover:translate-x-1 transition-all duration-150
+                               inline-flex items-center gap-1.5"
+                  >
+                    <span className="text-[#3B82C4] text-xs">›</span>
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 3 — Treatments */}
+          <div>
+            <h4 className="text-white text-sm font-semibold mb-5 tracking-wide">
+              Treatments
+            </h4>
+            <ul className="flex flex-col gap-3">
+              {treatments.map(({ label, href }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    className="text-slate-400 text-sm hover:text-white
+                               hover:translate-x-1 transition-all duration-150
+                               inline-flex items-center gap-1.5"
+                  >
+                    <span className="text-[#E07AA0] text-xs">›</span>
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 4 — Contact */}
+          <div>
+            <h4 className="text-white text-sm font-semibold mb-5 tracking-wide">
+              Contact Us
+            </h4>
+            <ul className="flex flex-col gap-4">
+              {contactInfo.map(({ icon, text }, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  {icon}
+                  <span className="text-slate-400 text-sm leading-relaxed">
+                    {text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Divider ───────────────────────────────────────── */}
+      <div className="border-t border-white/8 mx-6" />
+
+      {/* ── Bottom bar ────────────────────────────────────── */}
+      <div
+        className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row
+                      items-center justify-between gap-3"
+      >
+        <p className="text-slate-500 text-xs">
+          © {new Date().getFullYear()} Sakthi Dental Clinic. All rights
+          reserved.
+        </p>
+        <p className="text-slate-500 text-xs">
+          Designed with ❤️ for the community of Hosur
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

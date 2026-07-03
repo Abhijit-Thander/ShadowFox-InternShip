@@ -19,7 +19,7 @@ const treatments = [
     icon: "🧹",
     title: "Teeth Cleaning & Scaling",
     category: "Preventive",
-    tag: "Most Popular",
+
     tagColor: "bg-blue-100 text-blue-600",
     short: "Non-surgical gum care with modern LASER technology.",
     description:
@@ -32,7 +32,7 @@ const treatments = [
     icon: "🔧",
     title: "Tooth Filling",
     category: "Restorative",
-    tag: "Common",
+
     tagColor: "bg-purple-100 text-purple-600",
     short: "Composite fillings for cavities and tooth restoration.",
     description:
@@ -45,7 +45,7 @@ const treatments = [
     icon: "🦷",
     title: "Tooth Extraction",
     category: "Surgical",
-    tag: "Pain-Free",
+
     tagColor: "bg-green-100 text-green-600",
     short: "Safe and painless removal of impacted or decayed teeth.",
     description:
@@ -58,7 +58,7 @@ const treatments = [
     icon: "😁",
     title: "Artificial Complete Denture",
     category: "Restorative",
-    tag: "Full Smile",
+
     tagColor: "bg-pink-100 text-pink-600",
     short: "Full mouth replacement to restore confidence and function.",
     description:
@@ -71,7 +71,7 @@ const treatments = [
     icon: "🔩",
     title: "Dental Implants",
     category: "Surgical",
-    tag: "Permanent",
+
     tagColor: "bg-indigo-100 text-indigo-600",
     short: "Biocompatible titanium implants for permanent tooth replacement.",
     description:
@@ -84,7 +84,7 @@ const treatments = [
     icon: "⚡",
     title: "Laser Dentistry",
     category: "Surgical",
-    tag: "Advanced",
+
     tagColor: "bg-yellow-100 text-yellow-700",
     short: "Minimally invasive laser procedures for precise treatments.",
     description:
@@ -97,7 +97,7 @@ const treatments = [
     icon: "🩺",
     title: "Root Canal Therapy",
     category: "Restorative",
-    tag: "Tooth Saving",
+   
     tagColor: "bg-teal-100 text-teal-600",
     short: "Relieves pain and preserves your natural tooth structure.",
     description:
@@ -110,7 +110,7 @@ const treatments = [
     icon: "😬",
     title: "Wisdom Tooth Extraction",
     category: "Surgical",
-    tag: "Gentle Care",
+   
     tagColor: "bg-orange-100 text-orange-600",
     short: "Expert removal with comprehensive post-operative care.",
     description:
@@ -123,7 +123,7 @@ const treatments = [
     icon: "🌉",
     title: "Fixed Partial Denture (Bridge)",
     category: "Restorative",
-    tag: "Secure Fit",
+   
     tagColor: "bg-cyan-100 text-cyan-600",
     short: "Custom bridges anchored to adjacent teeth or implants.",
     description:
@@ -136,7 +136,7 @@ const treatments = [
     icon: "💎",
     title: "Teeth Whitening (Bleaching)",
     category: "Cosmetic",
-    tag: "Brighten Smile",
+   
     tagColor: "bg-amber-100 text-amber-700",
     short: "Professional whitening for a radiant, confident smile.",
     description:
@@ -149,7 +149,7 @@ const treatments = [
     icon: "✨",
     title: "Veneers",
     category: "Cosmetic",
-    tag: "Smile Makeover",
+  
     tagColor: "bg-rose-100 text-rose-600",
     short: "Custom shells to cover chips, gaps, or discolouration.",
     description:
@@ -162,7 +162,7 @@ const treatments = [
     icon: "👶",
     title: "Pediatric Dentistry",
     category: "Pediatric",
-    tag: "Child Friendly",
+  
     tagColor: "bg-lime-100 text-lime-700",
     short: "Gentle dental care designed especially for children.",
     description:
@@ -175,7 +175,7 @@ const treatments = [
     icon: "🔬",
     title: "Flap Surgery",
     category: "Surgical",
-    tag: "Advanced Gum",
+   
     tagColor: "bg-violet-100 text-violet-600",
     short: "Deep-cleaning surgery for advanced gum disease.",
     description:
@@ -188,7 +188,7 @@ const treatments = [
     icon: "🔄",
     title: "Orthodontic Braces",
     category: "Orthodontic",
-    tag: "Align Teeth",
+   
     tagColor: "bg-blue-100 text-blue-600",
     short: "Metal, ceramic, or lingual braces for a confident smile.",
     description:
@@ -201,7 +201,7 @@ const treatments = [
     icon: "🫧",
     title: "Clear Aligners",
     category: "Orthodontic",
-    tag: "Discreet",
+    
     tagColor: "bg-sky-100 text-sky-600",
     short: "Transparent, removable trays for invisible alignment.",
     description:
@@ -211,7 +211,7 @@ const treatments = [
   },
 ];
 
-// ─── NAVBAR ──────────────────────────────────────────────────────────────────
+
 
 // ─── HERO ────────────────────────────────────────────────────────────────────
 
@@ -273,11 +273,6 @@ const TreatmentCard = ({ treatment, onClick }) => {
         <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-[#EBF3FC] to-[#F0EAFC] flex items-center justify-center text-2xl shadow-sm group-hover:scale-110 transition-transform duration-300">
           {icon}
         </div>
-        <span
-          className={`text-[11px] font-semibold px-3 py-1 rounded-full ${tagColor}`}
-        >
-          {tag}
-        </span>
       </div>
 
       {/* text */}
@@ -297,14 +292,6 @@ const TreatmentCard = ({ treatment, onClick }) => {
         </span>
         <span className="text-xs text-slate-400 bg-slate-50 border border-slate-100 rounded-full px-3 py-1">
           📅 {sessions}
-        </span>
-      </div>
-
-      {/* footer */}
-      <div className="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between">
-        <span className="text-xs font-medium text-[#E07AA0]">{category}</span>
-        <span className="text-xs text-[#3B82C4] font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-          Learn more <ChevronRight size={13} />
         </span>
       </div>
     </div>

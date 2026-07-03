@@ -6,6 +6,7 @@ import wheelChair from "../assets/AmenitiesIcon/icon-wheel-chair.png";
 import parking from "../assets/AmenitiesIcon/icon-parking.png";
 import pickup from "../assets/AmenitiesIcon/icon-pickup.png";
 import cityCenter from "../assets/AmenitiesIcon/icon-city-center.png";
+import heroImage from "../assets/Banner1.jpg";
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -120,8 +121,6 @@ const whyUs = [
   },
 ];
 
-// ─── NAVBAR ──────────────────────────────────────────────────────────────────
-
 // ─── HERO ────────────────────────────────────────────────────────────────────
 
 const Hero = () => (
@@ -130,7 +129,7 @@ const Hero = () => (
     <div className="absolute -top-32 -left-32 w-125 h-125 rounded-full bg-blue-100 opacity-40 blur-3xl pointer-events-none" />
     <div className="absolute -bottom-24 right-0 w-96 h-96 rounded-full bg-pink-100 opacity-40 blur-3xl pointer-events-none" />
 
-    <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
       {/* Left — content */}
       <div className="flex flex-col gap-6">
         {/* pill badge */}
@@ -169,16 +168,16 @@ const Hero = () => (
       <div className="relative flex justify-center items-center">
         {/* Main image placeholder */}
         <div className="relative w-full max-w-sm">
-          <div className="w-full aspect-4/5 rounded-4xl bg-linear-to-br from-[#C5DDF5] to-[#F5C6D8] flex flex-col items-center justify-center gap-3 shadow-2xl shadow-blue-100">
-            <span className="text-7xl opacity-50">🦷</span>
-            <p className="text-sm text-slate-400 italic">
-              Hero image from Drive link
-            </p>
-            <p className="text-xs text-slate-300">(Doctor / clinic photo)</p>
+          <div className="w-full aspect-4/5 rounded-4xl  flex flex-col items-center justify-center gap-3 shadow-2xl shadow-blue-100">
+            <img
+              src={heroImage}
+              alt="Hero"
+              className=" w-full h-full object-bottom-right rounded-2xl "
+            />
           </div>
 
           {/* Floating card — open hours */}
-          <div className="absolute -left-10 top-10 bg-white rounded-2xl px-4 py-3.5 shadow-xl border border-slate-100 flex items-center gap-3 min-w-max">
+          {/* <div className="absolute -left-10 top-10 bg-white rounded-2xl px-4 py-3.5 shadow-xl border border-slate-100 flex items-center gap-3 min-w-max">
             <div className="w-10 h-10 bg-[#EBF3FC] rounded-xl flex items-center justify-center text-lg">
               🕐
             </div>
@@ -188,10 +187,10 @@ const Hero = () => (
               </strong>
               <span className="text-xs text-slate-400">9 AM – 9 PM</span>
             </div>
-          </div>
+          </div> */}
 
           {/* Floating card — rating */}
-          <div className="absolute -right-8 top-1/2 -translate-y-1/2 bg-white rounded-2xl px-4 py-3.5 shadow-xl border border-slate-100 flex items-center gap-3 min-w-max">
+          {/* <div className="absolute -right-8 top-1/2 -translate-y-1/2 bg-white rounded-2xl px-4 py-3.5 shadow-xl border border-slate-100 flex items-center gap-3 min-w-max">
             <div className="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center text-lg">
               ⭐
             </div>
@@ -199,7 +198,7 @@ const Hero = () => (
               <strong className="block text-sm text-[#1A2744]">4.9 / 5</strong>
               <span className="text-xs text-slate-400">Google Rating</span>
             </div>
-          </div>
+          </div> */}
 
           {/* Floating card — experience */}
           <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-linear-to-r from-[#3B82C4] to-[#5BA4E0] text-white rounded-full px-6 py-2.5 shadow-lg text-xs font-semibold whitespace-nowrap flex items-center gap-2">

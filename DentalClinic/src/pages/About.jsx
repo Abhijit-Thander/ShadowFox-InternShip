@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, Award, Heart, Users, Microscope } from "lucide-react";
+import Doctor from '../assets/avatar-female.jpg'
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -161,9 +162,7 @@ const Hero = () => (
         {/* photo card */}
         <div className="relative w-72 h-80">
           <div className="w-full h-full rounded-3xl bg-linear-to-br from-[#C5DDF5] to-[#F5C6D8] flex flex-col items-center justify-center gap-3 shadow-xl">
-            <span className="text-7xl opacity-60">👩‍⚕️</span>
-            <p className="text-sm text-slate-500 italic">Dr. Anupriya photo</p>
-            <p className="text-xs text-slate-400">(Replace with Drive image)</p>
+            <img src={Doctor} alt="Dr. Anupriya" className="w-full h-full object-cover rounded-3xl" />
           </div>
 
           {/* badge — experience */}
@@ -532,7 +531,6 @@ const AboutPage = () => (
     <VisionMission />
     <TeamSection />
     <TrustStrip />
-   
   </div>
 );
 

@@ -63,27 +63,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#1A2744] text-white">
-      {/* ── Top CTA strip ─────────────────────────────────── */}
-      {/* <div className="bg-linear-to-r from-[#3B82C4] to-[#2563A8] px-6 py-5">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            <p className="text-white font-semibold text-base">
-              Ready for a healthier smile?
-            </p>
-            <p className="text-blue-100 text-sm mt-0.5">
-              Book your appointment today — same-day slots available.
-            </p>
-          </div>
-          <a
-            href="/contact"
-            className="shrink-0 bg-white text-[#3B82C4] font-semibold text-sm
-                       px-6 py-2.5 rounded-full hover:bg-blue-50 transition-colors"
-          >
-            Fix an Appointment →
-          </a>
-        </div>
-      </div> */}
-
       {/* ── Main footer grid ───────────────────────────────── */}
       <div className="max-w-6xl mx-auto px-6 pt-14 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -198,14 +177,11 @@ const Footer = () => {
       {/* ── Bottom bar ────────────────────────────────────── */}
       <div
         className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row
-                      items-center justify-between gap-3"
+                      items-center text-center gap-3"
       >
         <p className="text-slate-500 text-xs">
           © {new Date().getFullYear()} Sakthi Dental Clinic. All rights
           reserved.
-        </p>
-        <p className="text-slate-500 text-xs">
-          Designed with ❤️ for the community of Hosur
         </p>
       </div>
     </footer>

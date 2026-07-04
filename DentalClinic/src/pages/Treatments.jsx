@@ -1,5 +1,20 @@
 import { useState } from "react";
 import { ArrowRight, ChevronRight, Stethoscope } from "lucide-react";
+import teethCleaning from "../assets/treatments/Teeth-Cleaning.png";
+import toothFilling from "../assets/treatments/Tooth-Filling.jpg";
+import toothExct from "../assets/treatments/toothExct.png";
+import acd from "../assets/treatments/acd.png";
+import dentalImp from "../assets/treatments/impants.png";
+import laserDen from "../assets/treatments/Laser-Surgery.png";
+import rootCanel from "../assets/treatments/RootCanel.png";
+import wishDom from "../assets/treatments/wishDom.png";
+import fpd from "../assets/treatments/fpd.png";
+import tWhitening from "../assets/treatments/Bleaching.png";
+import veneer from "../assets/treatments/Veneer.jpg";
+import pd from "../assets/treatments/Pediatric-dentistry.png";
+import flap from "../assets/treatments/Flap-Surgery.png";
+import orthodontic from "../assets/treatments/Orthodonic.png";
+import aligners from "../assets/treatments/Aligner.png";
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -19,8 +34,7 @@ const treatments = [
     icon: "🧹",
     title: "Teeth Cleaning & Scaling",
     category: "Preventive",
-
-    tagColor: "bg-blue-100 text-blue-600",
+    img: teethCleaning,
     short: "Non-surgical gum care with modern LASER technology.",
     description:
       "Advanced, non-surgical gum care using modern LASER technology for precise and effective treatment. Whether you're dealing with early signs of gum disease or a more advanced condition, our skilled professionals ensure thorough cleaning to restore gum health. Scaling is advised for moderate cases to remove plaque and tartar buildup, while severe cases may require root planing supported by LASER treatment.",
@@ -32,8 +46,7 @@ const treatments = [
     icon: "🔧",
     title: "Tooth Filling",
     category: "Restorative",
-
-    tagColor: "bg-purple-100 text-purple-600",
+    img: toothFilling,
     short: "Composite fillings for cavities and tooth restoration.",
     description:
       "We specialize in restoring smiles through expert tooth filling services. Whether tooth damage is caused by cavities, trauma, or wear from habits like teeth grinding or nail-biting, our team uses high-quality materials and the latest techniques to repair and protect your teeth. We focus on sealing gaps effectively to prevent future decay and ensure long-term oral health.",
@@ -45,8 +58,7 @@ const treatments = [
     icon: "🦷",
     title: "Tooth Extraction",
     category: "Surgical",
-
-    tagColor: "bg-green-100 text-green-600",
+    img: toothExct,
     short: "Safe and painless removal of impacted or decayed teeth.",
     description:
       "When a tooth is beyond repair, we ensure the extraction process is handled with the utmost care and comfort. Our experienced dental team evaluates every option before recommending removal, but when necessary, we perform extractions using gentle techniques to minimize discomfort. We explain each step to our patients and support you through every stage of recovery.",
@@ -58,8 +70,7 @@ const treatments = [
     icon: "😁",
     title: "Artificial Complete Denture",
     category: "Restorative",
-
-    tagColor: "bg-pink-100 text-pink-600",
+    img: acd,
     short: "Full mouth replacement to restore confidence and function.",
     description:
       "We craft high-quality complete dentures to restore both function and aesthetics for patients with missing teeth. Our dentures are designed with precision using durable materials, providing a natural look and a comfortable fit. Whether you're replacing several teeth or a full arch, our customized solutions help you regain confidence and improve daily functionality.",
@@ -71,8 +82,7 @@ const treatments = [
     icon: "🔩",
     title: "Dental Implants",
     category: "Surgical",
-
-    tagColor: "bg-indigo-100 text-indigo-600",
+    img: dentalImp,
     short: "Biocompatible titanium implants for permanent tooth replacement.",
     description:
       "Dental implants offer a modern and reliable solution for replacing missing teeth. Using biocompatible materials like titanium, we securely place artificial roots into the jawbone, creating a stable foundation for prosthetic teeth. Our advanced implant procedures restore both the appearance and strength of your smile, ensuring a natural feel and long-lasting results.",
@@ -84,8 +94,7 @@ const treatments = [
     icon: "⚡",
     title: "Laser Dentistry",
     category: "Surgical",
-
-    tagColor: "bg-yellow-100 text-yellow-700",
+    img: laserDen,
     short: "Minimally invasive laser procedures for precise treatments.",
     description:
       "We utilize advanced laser technology to perform precise, minimally invasive dental treatments. From soft tissue surgeries to gum care, laser procedures offer faster healing, reduced discomfort, and enhanced accuracy. Whether you're undergoing gum reshaping or other corrective treatments, our state-of-the-art laser equipment ensures efficient, safe, and comfortable care.",
@@ -97,8 +106,7 @@ const treatments = [
     icon: "🩺",
     title: "Root Canal Therapy",
     category: "Restorative",
-   
-    tagColor: "bg-teal-100 text-teal-600",
+    img: rootCanel,
     short: "Relieves pain and preserves your natural tooth structure.",
     description:
       "When tooth infections reach deep into the pulp, root canal treatment becomes essential. We carefully remove infected tissue, clean the area thoroughly, and seal the tooth to prevent future issues. Our focus is on relieving pain, eliminating infection, and preserving your natural tooth structure for long-term dental health.",
@@ -110,8 +118,7 @@ const treatments = [
     icon: "😬",
     title: "Wisdom Tooth Extraction",
     category: "Surgical",
-   
-    tagColor: "bg-orange-100 text-orange-600",
+    img: wishDom,
     short: "Expert removal with comprehensive post-operative care.",
     description:
       "If impacted or problematic, wisdom teeth can cause discomfort and oral health risks. We specialize in gentle and effective wisdom tooth removal, using modern techniques and anesthesia options to ensure a smooth, pain-free experience. We also provide comprehensive post-operative care to support quick recovery and lasting comfort.",
@@ -123,8 +130,7 @@ const treatments = [
     icon: "🌉",
     title: "Fixed Partial Denture (Bridge)",
     category: "Restorative",
-   
-    tagColor: "bg-cyan-100 text-cyan-600",
+    img: fpd,
     short: "Custom bridges anchored to adjacent teeth or implants.",
     description:
       "Our expertly crafted fixed partial dentures offer a secure solution for replacing missing teeth by anchoring prosthetic teeth to adjacent natural teeth or implants. We focus on custom-made dental bridges that restore your smile's appearance while improving chewing function and maintaining oral stability.",
@@ -136,8 +142,7 @@ const treatments = [
     icon: "💎",
     title: "Teeth Whitening (Bleaching)",
     category: "Cosmetic",
-   
-    tagColor: "bg-amber-100 text-amber-700",
+    img: tWhitening,
     short: "Professional whitening for a radiant, confident smile.",
     description:
       "Brighten your smile with professional teeth whitening services. We treat both external and internal stains, using safe bleaching agents to lighten your teeth by several shades. Whether addressing discoloration from food, beverages, or age, our whitening treatments restore your smile's natural radiance and boost your confidence.",
@@ -149,8 +154,7 @@ const treatments = [
     icon: "✨",
     title: "Veneers",
     category: "Cosmetic",
-  
-    tagColor: "bg-rose-100 text-rose-600",
+    img: pd,
     short: "Custom shells to cover chips, gaps, or discolouration.",
     description:
       "Transform your smile with dental veneers — thin, custom-made shells designed to cover imperfections such as chips, gaps, or discoloration. We offer high-quality veneers that enhance your teeth's appearance, giving you a flawless and natural-looking smile tailored precisely to you.",
@@ -162,8 +166,7 @@ const treatments = [
     icon: "👶",
     title: "Pediatric Dentistry",
     category: "Pediatric",
-  
-    tagColor: "bg-lime-100 text-lime-700",
+    img: veneer,
     short: "Gentle dental care designed especially for children.",
     description:
       "We provide gentle and comprehensive dental care for children. Our friendly team creates a welcoming environment, ensuring young patients feel safe and comfortable during their visits. From routine check-ups to preventive treatments, we focus on building healthy dental habits for a lifetime of bright smiles.",
@@ -175,8 +178,7 @@ const treatments = [
     icon: "🔬",
     title: "Flap Surgery",
     category: "Surgical",
-   
-    tagColor: "bg-violet-100 text-violet-600",
+    img: flap,
     short: "Deep-cleaning surgery for advanced gum disease.",
     description:
       "For advanced gum disease, flap surgery may be necessary. Our skilled team performs this procedure by lifting the gum tissue to remove deep-seated plaque and bacteria, then repositioning it for optimal healing. This treatment helps prevent further periodontal issues and supports long-term gum health.",
@@ -188,8 +190,7 @@ const treatments = [
     icon: "🔄",
     title: "Orthodontic Braces",
     category: "Orthodontic",
-   
-    tagColor: "bg-blue-100 text-blue-600",
+    img: orthodontic,
     short: "Metal, ceramic, or lingual braces for a confident smile.",
     description:
       "Correct misaligned teeth with customized orthodontic treatments. We offer a variety of braces — metal, ceramic, or lingual — to suit your preferences. Our goal is to achieve improved alignment, better bite function, and a confident, harmonious smile that you'll be proud to show off.",
@@ -201,8 +202,7 @@ const treatments = [
     icon: "🫧",
     title: "Clear Aligners",
     category: "Orthodontic",
-    
-    tagColor: "bg-sky-100 text-sky-600",
+    img: aligners,
     short: "Transparent, removable trays for invisible alignment.",
     description:
       "For a discreet alternative to traditional braces, we offer clear aligners. These transparent, removable trays gradually shift your teeth into perfect alignment, providing comfort and flexibility throughout your orthodontic journey. Eat what you want, remove for photos — orthodontics on your terms.",
@@ -210,8 +210,6 @@ const treatments = [
     sessions: "Monthly visits",
   },
 ];
-
-
 
 // ─── HERO ────────────────────────────────────────────────────────────────────
 
@@ -258,41 +256,50 @@ const Hero = () => (
 // ─── TREATMENT CARD ──────────────────────────────────────────────────────────
 
 const TreatmentCard = ({ treatment, onClick }) => {
-  const { icon, title, tag, tagColor, short, category, duration, sessions } =
-    treatment;
+  const { icon, title, img, short, duration } = treatment;
 
   return (
     <div
       onClick={() => onClick(treatment)}
-      className="group bg-white border border-slate-200 rounded-2xl p-6 cursor-pointer
+      className="group bg-white border border-slate-200 rounded-2xl overflow-hidden cursor-pointer
                  hover:border-[#3B82C4] hover:shadow-xl hover:shadow-blue-100
-                 transition-all duration-300 flex flex-col gap-4"
+                 transition-all duration-300 flex flex-col"
     >
-      {/* top row */}
-      <div className="flex items-start justify-between">
-        <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-[#EBF3FC] to-[#F0EAFC] flex items-center justify-center text-2xl shadow-sm group-hover:scale-110 transition-transform duration-300">
-          {icon}
+      {/* ── Image ─────────────────────────────────────── */}
+      <div className="w-full h-48 overflow-hidden bg-[#EBF3FC] shrink-0">
+        <img
+          src={img}
+          alt={title}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+
+      {/* ── Content ───────────────────────────────────── */}
+      <div className="flex flex-col gap-3 p-5 flex-1">
+        {/* title + desc */}
+        <div>
+          <h3 className="font-semibold text-[#1A2744] text-base mb-1.5 group-hover:text-[#3B82C4] transition-colors leading-snug">
+            {title}
+          </h3>
+          <p className="text-slate-400 text-sm leading-relaxed line-clamp-2">
+            {short}
+          </p>
         </div>
-      </div>
 
-      {/* text */}
-      <div>
-        <h3 className="font-semibold text-[#1A2744] text-base mb-1.5 group-hover:text-[#3B82C4] transition-colors">
-          {title}
-        </h3>
-        <p className="text-slate-400 text-sm leading-relaxed line-clamp-2">
-          {short}
-        </p>
-      </div>
+        {/* spacer */}
+        <div className="flex-1" />
 
-      {/* meta */}
-      <div className="flex items-center gap-3 pt-1">
-        <span className="text-xs text-slate-400 bg-slate-50 border border-slate-100 rounded-full px-3 py-1">
-          ⏱ {duration}
-        </span>
-        <span className="text-xs text-slate-400 bg-slate-50 border border-slate-100 rounded-full px-3 py-1">
-          📅 {sessions}
-        </span>
+        {/* meta + arrow */}
+        <div className="flex items-center justify-between pt-3 border-t border-slate-100">
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-slate-400 bg-slate-50 border border-slate-100 rounded-full px-3 py-1">
+              ⏱ {duration}
+            </span>
+          </div>
+          <span className="text-xs text-[#3B82C4] font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+            Learn more ›
+          </span>
+        </div>
       </div>
     </div>
   );
@@ -417,24 +424,6 @@ const TreatmentsPage = () => {
 
       {/* Grid */}
       <main className="max-w-6xl mx-auto px-12 py-14">
-        {/* count */}
-        <p className="text-sm text-slate-400 mb-6">
-          Showing{" "}
-          <span className="font-semibold text-[#1A2744]">
-            {filtered.length}
-          </span>{" "}
-          treatment{filtered.length !== 1 ? "s" : ""}
-          {activeCategory !== "All" && (
-            <span>
-              {" "}
-              in{" "}
-              <span className="text-[#3B82C4] font-medium">
-                {activeCategory}
-              </span>
-            </span>
-          )}
-        </p>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((t) => (
             <TreatmentCard

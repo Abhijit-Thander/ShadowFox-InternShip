@@ -1,5 +1,6 @@
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -68,21 +69,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Col 1 — Brand */}
           <div className="lg:col-span-1">
-            {/* Logo */}
-            <div className="flex items-center gap-3 mb-4">
-              <div
-                className="w-10 h-10 rounded-full flex items-center justify-center text-lg
-                           bg-linear-to-br from-[#3B82C4] to-[#E07AA0] shrink-0"
-              >
-                🦷
-              </div>
-              <div className="leading-tight">
-                <strong className="block text-white font-semibold text-[15px]">
-                  Sakthi Dental Clinic
-                </strong>
-                <span className="text-blue-300 text-xs">Hosur, Tamil Nadu</span>
-              </div>
-            </div>
+            <img src={logo} alt="" className="mb-3 h-10 w-40" />
 
             {/* Tagline */}
             <p className="text-slate-400 text-sm leading-relaxed max-w-55">

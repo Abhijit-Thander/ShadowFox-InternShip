@@ -5,11 +5,11 @@ import { ArrowRight, MapPin, Mail, Phone, Clock } from "lucide-react";
 
 const Hero = () => (
   <section className="bg-linear-to-br from-[#EBF3FC] via-[#F8FAFF] to-[#FDF0F5] py-16 text-center px-6">
-    <span className="inline-block text-xs font-semibold tracking-[2.5px] uppercase text-[#E07AA0] mb-3">
+    <span className="inline-block text-xs font-semibold tracking-[2.5px] uppercase text-[#C0161B] mb-3">
       Get in Touch
     </span>
     <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#1A2744] leading-tight mb-4">
-      Contact <span className="text-[#3B82C4]">Us</span>
+      Contact <span className="text-[#1B4FBE]">Us</span>
     </h1>
     <p className="text-slate-500 text-base max-w-md mx-auto leading-relaxed">
       Have questions or want to book an appointment? We'd love to hear from you.
@@ -101,7 +101,7 @@ const ContactForm = () => {
             setSubmitted(false);
             setForm({ name: "", email: "", phone: "", message: "" });
           }}
-          className="mt-6 text-[#3B82C4] text-sm font-medium hover:underline"
+          className="mt-6 text-[#1B4FBE] text-sm font-medium hover:underline"
         >
           Send another message
         </button>
@@ -135,7 +135,7 @@ const ContactForm = () => {
               ${
                 errors.name
                   ? "border-red-400 focus:border-red-400"
-                  : "border-slate-200 focus:border-[#3B82C4] focus:ring-2 focus:ring-[#3B82C4]/10"
+                  : "border-slate-200 focus:border-[#3B82C4] focus:ring-2 focus:ring-[#1B4FBE]/10"
               }`}
           />
           {errors.name && (
@@ -158,7 +158,7 @@ const ContactForm = () => {
               ${
                 errors.email
                   ? "border-red-400 focus:border-red-400"
-                  : "border-slate-200 focus:border-[#3B82C4] focus:ring-2 focus:ring-[#3B82C4]/10"
+                  : "border-slate-200 focus:border-[#1B4FBE] focus:ring-2 focus:ring-[#1B4FBE]/10"
               }`}
           />
           {errors.email && (
@@ -182,7 +182,7 @@ const ContactForm = () => {
             ${
               errors.phone
                 ? "border-red-400 focus:border-red-400"
-                : "border-slate-200 focus:border-[#3B82C4] focus:ring-2 focus:ring-[#3B82C4]/10"
+                : "border-slate-200 focus:border-[#1B4FBE] focus:ring-2 focus:ring-[#1B4FBE]/10"
             }`}
         />
         {errors.phone && (
@@ -209,7 +209,7 @@ const ContactForm = () => {
       {/* Submit */}
       <button
         onClick={handleSubmit}
-        className="w-full bg-linear-to-r from-[#3B82C4] to-[#5BA4E0] text-white font-semibold py-3.5 rounded-xl shadow-md shadow-blue-200 hover:shadow-lg transition-shadow text-sm flex items-center justify-center gap-2"
+        className="w-full bg-linear-to-r from-[#1B4FBE] to-[#5BA4E0] text-white font-semibold py-3.5 rounded-xl shadow-md shadow-blue-200 hover:shadow-lg transition-shadow text-sm flex items-center justify-center gap-2"
       >
         Submit Message <ArrowRight size={15} />
       </button>

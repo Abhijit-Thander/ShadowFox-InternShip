@@ -127,7 +127,7 @@ const Hero = ({ searchQuery, setSearchQuery }) => (
     <div className="absolute -bottom-16 right-0 w-72 h-72 rounded-full bg-pink-100 opacity-40 blur-3xl pointer-events-none" />
 
     <div className="relative z-10  mx-auto px-6 text-center">
-      <span className="inline-block text-xs font-semibold tracking-[2.5px] uppercase text-[#E07AA0] mb-4">
+      <span className="inline-block text-xs font-semibold tracking-[2.5px] uppercase text-[#C0161B] mb-4">
         Patient Support
       </span>
       <h1 className="font-serif text-5xl font-bold text-[#1A2744] leading-tight mb-5">

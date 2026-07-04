@@ -220,13 +220,13 @@ const Hero = () => (
     <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-pink-100 opacity-40 blur-3xl pointer-events-none" />
 
     <div className="relative z-10 max-w-2xl mx-auto">
-      <span className="inline-block text-xs font-semibold tracking-[2.5px] uppercase text-[#E07AA0] mb-4">
+      <span className="inline-block text-xs font-semibold tracking-[2.5px] uppercase text-[#C0161B] mb-4">
         Our Services
       </span>
       <h1 className="font-serif text-5xl font-bold text-[#1A2744] leading-tight mb-5">
         Complete Dental
         <br />
-        <span className="text-[#3B82C4]">Treatments</span>
+        <span className="text-[#1B4FBE]">Treatments</span>
       </h1>
       <p className="text-slate-500 text-base leading-relaxed mb-8">
         From routine cleanings to advanced implants — 15 specialised dental

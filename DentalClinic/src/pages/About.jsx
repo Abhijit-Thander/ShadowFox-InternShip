@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { ArrowRight, Award, Heart, Users, Microscope } from "lucide-react";
-import Doctor from '../assets/avatar-female.jpg'
+import Doctor from "../assets/avatar-female.jpg";
+
+// ─── BRAND COLORS ────────────────────────────────────────────────────────────
+// Primary Blue  : #1B4FBE  (logo royal blue)
+// Primary Red   : #C0161B  (logo deep red)
+// Blue Light BG : #EBF0FC
+// Red Light BG  : #FEF0F0
+// Dark Navy     : #1A2744
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -9,14 +16,14 @@ const team = [
     name: "Dr. Anupriya",
     role: "Founder & Chief Surgeon",
     initial: "A",
-    color: "from-[#3B82C4] to-[#5BA4E0]",
+    color: "from-[#1B4FBE] to-[#4A7FD4]",
     specialty: "General Dentistry",
   },
   {
     name: "Dr. Ananya Iyer",
     role: "Prosthodontist",
     initial: "A",
-    color: "from-[#E07AA0] to-[#F4A3C0]",
+    color: "from-[#C0161B] to-[#E05A5A]",
     specialty: "Crowns & Bridges",
   },
   {
@@ -71,30 +78,19 @@ const team = [
 ];
 
 const milestones = [
-  {
-    year: "2000",
-    label: "Graduated & began professional journey",
-    side: "right",
-  },
+  { year: "2000", label: "Graduated & began professional journey" },
   {
     year: "2000–06",
     label: "Six impactful years at Mathura Clinic refining clinical skills",
-    side: "left",
   },
-  {
-    year: "2004",
-    label: "Founded Sakthi Dental Clinic in Hosur",
-    side: "right",
-  },
+  { year: "2004", label: "Founded Sakthi Dental Clinic in Hosur" },
   {
     year: "2010+",
     label: "Appointed as Dental Consultant at Chandara Hospital PHC",
-    side: "left",
   },
   {
     year: "Today",
     label: "Serving 5000+ patients with 9 specialist doctors under one roof",
-    side: "right",
   },
 ];
 
@@ -121,26 +117,24 @@ const values = [
   },
 ];
 
-// ─── NAVBAR ──────────────────────────────────────────────────────────────────
-
 // ─── HERO ────────────────────────────────────────────────────────────────────
 
 const Hero = () => (
-  <section className="relative overflow-hidden bg-linear-to-br from-[#EBF3FC] via-white to-[#FDF0F5]">
+  <section className="relative overflow-hidden bg-linear-to-br from-[#EBF0FC] via-white to-[#FEF0F0]">
     {/* blobs */}
     <div className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-blue-100 opacity-50 blur-3xl pointer-events-none" />
-    <div className="absolute -bottom-16 -right-16 w-72 h-72 rounded-full bg-pink-100 opacity-50 blur-3xl pointer-events-none" />
+    <div className="absolute -bottom-16 -right-16 w-72 h-72 rounded-full bg-red-100 opacity-30 blur-3xl pointer-events-none" />
 
     <div className="relative z-10 max-w-6xl mx-auto px-12 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       {/* left */}
       <div>
-        <span className="inline-block text-xs font-semibold tracking-[2.5px] uppercase text-[#E07AA0] mb-4">
+        <span className="inline-block text-xs font-semibold tracking-[2.5px] uppercase text-[#C0161B] mb-4">
           About Sakthi Dental Clinic
         </span>
         <h1 className="font-serif text-5xl font-bold text-[#1A2744] leading-tight mb-5">
           Get to Know
           <br />
-          <span className="text-[#3B82C4]">Dr. Anupriya</span>
+          <span className="text-[#1B4FBE]">Dr. Anupriya</span>
         </h1>
         <p className="text-slate-500 text-base leading-relaxed mb-8 max-w-md">
           Your Trusted Partner in Dental Care. Bringing over 20 years of
@@ -148,26 +142,29 @@ const Hero = () => (
           at Hosur — combining clinical precision with genuine warmth.
         </p>
         <div className="flex flex-wrap gap-3">
-          <button className="bg-linear-to-r from-[#3B82C4] to-[#5BA4E0] text-white font-semibold px-6 py-3 rounded-full shadow-md shadow-blue-200 hover:shadow-lg transition-shadow flex items-center gap-2">
+          <button className="bg-linear-to-r from-[#1B4FBE] to-[#4A7FD4] text-white font-semibold px-6 py-3 rounded-full shadow-md shadow-blue-200 hover:shadow-lg transition-shadow flex items-center gap-2 text-sm">
             Fix an Appointment <ArrowRight size={15} />
           </button>
-          <button className="bg-white border border-slate-200 text-[#1A2744] font-semibold px-6 py-3 rounded-full hover:border-[#3B82C4] transition-colors text-sm">
+          <button className="bg-white border border-slate-200 text-[#1A2744] font-semibold px-6 py-3 rounded-full hover:border-[#1B4FBE] transition-colors text-sm">
             Meet Our Team ↓
           </button>
         </div>
       </div>
 
-      {/* right — Dr. photo placeholder + floating badges */}
+      {/* right — Dr. photo + floating badges */}
       <div className="relative flex justify-center">
-        {/* photo card */}
         <div className="relative w-72 h-80">
-          <div className="w-full h-full rounded-3xl bg-linear-to-br from-[#C5DDF5] to-[#F5C6D8] flex flex-col items-center justify-center gap-3 shadow-xl">
-            <img src={Doctor} alt="Dr. Anupriya" className="w-full h-full object-cover rounded-3xl" />
+          <div className="w-full h-full rounded-3xl bg-linear-to-br from-[#B8CCF0] to-[#FECACA] flex flex-col items-center justify-center gap-3 shadow-xl overflow-hidden">
+            <img
+              src={Doctor}
+              alt="Dr. Anupriya"
+              className="w-full h-full object-cover rounded-3xl"
+            />
           </div>
 
           {/* badge — experience */}
           <div className="absolute -left-10 top-10 bg-white rounded-2xl px-4 py-3 shadow-lg border border-slate-100 flex items-center gap-3">
-            <div className="w-9 h-9 bg-[#EBF3FC] rounded-xl flex items-center justify-center text-base">
+            <div className="w-9 h-9 bg-[#EBF0FC] rounded-xl flex items-center justify-center text-base">
               🏅
             </div>
             <div className="leading-tight">
@@ -180,7 +177,7 @@ const Hero = () => (
 
           {/* badge — patients */}
           <div className="absolute -right-10 bottom-14 bg-white rounded-2xl px-4 py-3 shadow-lg border border-slate-100 flex items-center gap-3">
-            <div className="w-9 h-9 bg-[#FDF0F5] rounded-xl flex items-center justify-center text-base">
+            <div className="w-9 h-9 bg-[#FEF0F0] rounded-xl flex items-center justify-center text-base">
               ❤️
             </div>
             <div className="leading-tight">
@@ -190,7 +187,7 @@ const Hero = () => (
           </div>
 
           {/* badge — est */}
-          <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-linear-to-r from-[#3B82C4] to-[#5BA4E0] text-white rounded-full px-5 py-2 shadow-lg text-xs font-semibold whitespace-nowrap">
+          <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-linear-to-r from-[#1B4FBE] to-[#4A7FD4] text-white rounded-full px-5 py-2 shadow-lg text-xs font-semibold whitespace-nowrap">
             ✦ Established 2004 — Hosur
           </div>
         </div>
@@ -205,7 +202,7 @@ const DrBio = () => (
   <section className="max-w-6xl mx-auto px-12 py-20 grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
     {/* timeline — col 2 */}
     <div className="lg:col-span-2">
-      <span className="text-xs font-semibold tracking-[2.5px] uppercase text-[#E07AA0] block mb-3">
+      <span className="text-xs font-semibold tracking-[2.5px] uppercase text-[#C0161B] block mb-3">
         Her Journey
       </span>
       <h2 className="font-serif text-3xl font-bold text-[#1A2744] mb-10 leading-tight">
@@ -214,21 +211,20 @@ const DrBio = () => (
         Dedicated Care
       </h2>
 
-      {/* vertical timeline */}
       <div className="relative">
-        {/* centre line */}
-        <div className="absolute left-4 top-2 bottom-2 w-px bg-linear-to-b from-[#3B82C4] via-[#E07AA0] to-[#3B82C4] opacity-30" />
+        {/* vertical line */}
+        <div className="absolute left-4 top-2 bottom-2 w-px bg-linear-to-b from-[#1B4FBE] via-[#C0161B] to-[#1B4FBE] opacity-30" />
 
         <div className="flex flex-col gap-8">
           {milestones.map(({ year, label }, i) => (
             <div key={i} className="flex gap-5 items-start">
               <div className="flex flex-col items-center shrink-0">
-                <div className="w-8 h-8 rounded-full bg-linear-to-br from-[#3B82C4] to-[#E07AA0] flex items-center justify-center z-10 shadow-md">
+                <div className="w-8 h-8 rounded-full bg-linear-to-br from-[#1B4FBE] to-[#C0161B] flex items-center justify-center z-10 shadow-md">
                   <div className="w-2.5 h-2.5 bg-white rounded-full" />
                 </div>
               </div>
               <div className="pt-0.5">
-                <span className="text-[11px] font-bold tracking-wider uppercase text-[#3B82C4] block mb-0.5">
+                <span className="text-[11px] font-bold tracking-wider uppercase text-[#1B4FBE] block mb-0.5">
                   {year}
                 </span>
                 <p className="text-sm text-slate-500 leading-relaxed">
@@ -243,12 +239,12 @@ const DrBio = () => (
 
     {/* bio text — col 3 */}
     <div className="lg:col-span-3 pt-2">
-      <span className="text-xs font-semibold tracking-[2.5px] uppercase text-[#E07AA0] block mb-3">
+      <span className="text-xs font-semibold tracking-[2.5px] uppercase text-[#C0161B] block mb-3">
         About the Founder
       </span>
       <h2 className="font-serif text-3xl font-bold text-[#1A2744] mb-6 leading-tight">
         Dr. Anupriya
-        <span className="block text-lg font-medium text-[#3B82C4] mt-1 font-sans">
+        <span className="block text-lg font-medium text-[#1B4FBE] mt-1 font-sans">
           Founder & Chief Dental Surgeon
         </span>
       </h2>
@@ -280,14 +276,14 @@ const DrBio = () => (
       {/* credential badges */}
       <div className="flex flex-wrap gap-2.5 mt-8">
         {[
-          { label: "20+ Years Experience", bg: "bg-[#EBF3FC] text-[#3B82C4]" },
-          { label: "Founded 2004", bg: "bg-[#FDF0F5] text-[#E07AA0]" },
-          { label: "PHC Consultant", bg: "bg-[#EBF3FC] text-[#3B82C4]" },
+          { label: "20+ Years Experience", bg: "bg-[#EBF0FC] text-[#1B4FBE]" },
+          { label: "Founded 2004", bg: "bg-[#FEF0F0] text-[#C0161B]" },
+          { label: "PHC Consultant", bg: "bg-[#EBF0FC] text-[#1B4FBE]" },
           {
             label: "Women & Child Specialist",
-            bg: "bg-[#FDF0F5] text-[#E07AA0]",
+            bg: "bg-[#FEF0F0] text-[#C0161B]",
           },
-          { label: "LASER Certified", bg: "bg-[#EBF3FC] text-[#3B82C4]" },
+          { label: "LASER Certified", bg: "bg-[#EBF0FC] text-[#1B4FBE]" },
         ].map(({ label, bg }) => (
           <span
             key={label}
@@ -309,7 +305,7 @@ const DrBio = () => (
             key={label}
             className="bg-[#F8FAFF] border border-slate-100 rounded-2xl p-4 text-center"
           >
-            <strong className="block font-serif text-2xl text-[#1A2744]">
+            <strong className="block font-serif text-2xl text-[#1B4FBE]">
               {n}
             </strong>
             <span className="text-xs text-slate-400 mt-1 block">{label}</span>
@@ -325,9 +321,8 @@ const DrBio = () => (
 const VisionMission = () => (
   <section className="bg-[#F8FAFF] px-12 py-20">
     <div className="max-w-6xl mx-auto">
-      {/* header */}
       <div className="text-center mb-14">
-        <span className="text-xs font-semibold tracking-[2.5px] uppercase text-[#E07AA0] block mb-3">
+        <span className="text-xs font-semibold tracking-[2.5px] uppercase text-[#C0161B] block mb-3">
           Our Purpose
         </span>
         <h2 className="font-serif text-4xl font-bold text-[#1A2744] leading-tight">
@@ -335,12 +330,11 @@ const VisionMission = () => (
         </h2>
       </div>
 
-      {/* two cards */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
         {/* mission */}
         <div className="bg-white border border-slate-200 rounded-3xl p-10 relative overflow-hidden group hover:shadow-xl hover:shadow-blue-100 transition-all duration-300">
-          <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-[#3B82C4] to-[#5BA4E0] rounded-t-3xl" />
-          <div className="w-12 h-12 bg-[#EBF3FC] rounded-2xl flex items-center justify-center text-2xl mb-6">
+          <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-[#1B4FBE] to-[#4A7FD4] rounded-t-3xl" />
+          <div className="w-12 h-12 bg-[#EBF0FC] rounded-2xl flex items-center justify-center text-2xl mb-6">
             🎯
           </div>
           <h3 className="font-serif text-2xl font-bold text-[#1A2744] mb-4">
@@ -357,9 +351,9 @@ const VisionMission = () => (
         </div>
 
         {/* vision */}
-        <div className="bg-white border border-slate-200 rounded-3xl p-10 relative overflow-hidden group hover:shadow-xl hover:shadow-pink-100 transition-all duration-300">
-          <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-[#E07AA0] to-[#F4A3C0] rounded-t-3xl" />
-          <div className="w-12 h-12 bg-[#FDF0F5] rounded-2xl flex items-center justify-center text-2xl mb-6">
+        <div className="bg-white border border-slate-200 rounded-3xl p-10 relative overflow-hidden group hover:shadow-xl hover:shadow-red-100 transition-all duration-300">
+          <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-[#C0161B] to-[#E05A5A] rounded-t-3xl" />
+          <div className="w-12 h-12 bg-[#FEF0F0] rounded-2xl flex items-center justify-center text-2xl mb-6">
             🔭
           </div>
           <h3 className="font-serif text-2xl font-bold text-[#1A2744] mb-4">
@@ -380,9 +374,9 @@ const VisionMission = () => (
         {values.map(({ icon, title, desc }) => (
           <div
             key={title}
-            className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-[#3B82C4] hover:shadow-lg hover:shadow-blue-50 transition-all duration-300 group"
+            className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-[#1B4FBE] hover:shadow-lg hover:shadow-blue-50 transition-all duration-300 group"
           >
-            <div className="w-11 h-11 bg-[#EBF3FC] rounded-xl flex items-center justify-center text-[#3B82C4] mb-4 group-hover:bg-[#3B82C4] group-hover:text-white transition-all duration-300">
+            <div className="w-11 h-11 bg-[#EBF0FC] rounded-xl flex items-center justify-center text-[#1B4FBE] mb-4 group-hover:bg-[#1B4FBE] group-hover:text-white transition-all duration-300">
               {icon}
             </div>
             <h4 className="font-semibold text-[#1A2744] text-sm mb-2">
@@ -403,9 +397,8 @@ const TeamSection = () => {
 
   return (
     <section className="max-w-6xl mx-auto px-12 py-20">
-      {/* header */}
       <div className="text-center mb-14">
-        <span className="text-xs font-semibold tracking-[2.5px] uppercase text-[#E07AA0] block mb-3">
+        <span className="text-xs font-semibold tracking-[2.5px] uppercase text-[#C0161B] block mb-3">
           Our Doctors
         </span>
         <h2 className="font-serif text-4xl font-bold text-[#1A2744] mb-4">
@@ -418,18 +411,18 @@ const TeamSection = () => {
       </div>
 
       {/* founder spotlight */}
-      <div className="bg-linear-to-br from-[#EBF3FC] to-[#FDF0F5] border border-slate-200 rounded-3xl p-8 mb-8 flex flex-col sm:flex-row items-center gap-8">
-        <div className="w-24 h-24 rounded-2xl bg-linear-to-br from-[#3B82C4] to-[#5BA4E0] flex items-center justify-center text-white text-3xl font-bold font-serif shrink-0 shadow-lg shadow-blue-200">
+      <div className="bg-linear-to-br from-[#EBF0FC] to-[#FEF0F0] border border-slate-200 rounded-3xl p-8 mb-8 flex flex-col sm:flex-row items-center gap-8">
+        <div className="w-24 h-24 rounded-2xl bg-linear-to-br from-[#1B4FBE] to-[#4A7FD4] flex items-center justify-center text-white text-3xl font-bold font-serif shrink-0 shadow-lg shadow-blue-200">
           A
         </div>
         <div className="text-center sm:text-left">
-          <span className="text-[11px] font-semibold tracking-widest uppercase text-[#E07AA0] block mb-1">
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-[#C0161B] block mb-1">
             Founder
           </span>
           <h3 className="font-serif text-2xl font-bold text-[#1A2744]">
             Dr. Anupriya
           </h3>
-          <p className="text-[#3B82C4] text-sm font-medium mt-0.5">
+          <p className="text-[#1B4FBE] text-sm font-medium mt-0.5">
             Chief Dental Surgeon
           </p>
           <p className="text-slate-500 text-xs mt-2 max-w-sm leading-relaxed">
@@ -462,24 +455,20 @@ const TeamSection = () => {
             onMouseEnter={() => setHovered(i)}
             onMouseLeave={() => setHovered(null)}
             className="bg-white border border-slate-200 rounded-2xl p-5 text-center
-                       hover:border-[#3B82C4] hover:shadow-lg hover:shadow-blue-50
+                       hover:border-[#1B4FBE] hover:shadow-lg hover:shadow-blue-50
                        transition-all duration-300 cursor-default group"
           >
-            {/* avatar */}
             <div
               className={`w-16 h-16 rounded-2xl bg-linear-to-br ${doctor.color} flex items-center justify-center text-white text-xl font-bold font-serif mx-auto mb-4 shadow-md group-hover:scale-105 transition-transform duration-300`}
             >
               {doctor.initial}
             </div>
-
             <h4 className="font-semibold text-[#1A2744] text-sm leading-tight mb-0.5">
               {doctor.name}
             </h4>
-            <p className="text-[#3B82C4] text-xs font-medium mb-2">
+            <p className="text-[#1B4FBE] text-xs font-medium mb-2">
               {doctor.role}
             </p>
-
-            {/* specialty pill — shows on hover */}
             <span
               className={`inline-block text-[10px] bg-[#F8FAFF] border border-slate-100 text-slate-400 px-3 py-1 rounded-full transition-all duration-200 ${hovered === i ? "opacity-100" : "opacity-60"}`}
             >
@@ -495,7 +484,7 @@ const TeamSection = () => {
 // ─── TRUST STRIP ─────────────────────────────────────────────────────────────
 
 const TrustStrip = () => (
-  <section className="bg-linear-to-r from-[#1A2744] to-[#2563A8] px-12 py-16 text-center text-white">
+  <section className="bg-linear-to-r from-[#1A2744] to-[#1A3F9A] px-12 py-16 text-center text-white">
     <div className="max-w-2xl mx-auto">
       <span className="text-blue-300 text-xs font-semibold tracking-[2.5px] uppercase block mb-4">
         Because your smile matters
@@ -511,7 +500,7 @@ const TrustStrip = () => (
         delivering excellence at every step.
       </p>
       <div className="flex flex-col sm:flex-row gap-3 justify-center">
-        <button className="bg-white text-[#3B82C4] font-semibold px-8 py-3.5 rounded-full hover:bg-blue-50 transition-colors text-sm flex items-center gap-2 justify-center">
+        <button className="bg-white text-[#1B4FBE] font-semibold px-8 py-3.5 rounded-full hover:bg-blue-50 transition-colors text-sm flex items-center gap-2 justify-center">
           Fix an Appointment <ArrowRight size={14} />
         </button>
         <button className="border border-white/30 text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white/10 transition-colors text-sm">

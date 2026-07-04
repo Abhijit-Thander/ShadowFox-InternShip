@@ -7,6 +7,7 @@ import Treatments from "./pages/Treatments";
 import FaqS from "./pages/FaqS";
 import Contact from "./pages/Contact";
 import Lenis from "lenis";
+import PrivacyPolicyPage from "./pages/Privacy";
 
 const App = () => {
   // useEffect(() => {
@@ -26,6 +27,7 @@ const App = () => {
         { path: "/treatments", element: <Treatments /> },
         { path: "/FAQs", element: <FaqS /> },
         { path: "/contact", element: <Contact /> },
+        { path: "/privacy", element: <PrivacyPolicyPage /> },
       ],
     },
   ]);

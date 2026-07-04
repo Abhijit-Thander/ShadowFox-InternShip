@@ -176,10 +176,10 @@ const Footer = () => {
 
       {/* ── Bottom bar ────────────────────────────────────── */}
       <div
-        className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row
+        className="max-w-6xl mx-auto px-6 py-5 sm:flex-row
                       items-center text-center gap-3"
       >
-        <p className="text-slate-500 text-xs">
+        <p className="text-slate-500 text-xs text-center">
           © {new Date().getFullYear()} Sakthi Dental Clinic. All rights
           reserved.
         </p>

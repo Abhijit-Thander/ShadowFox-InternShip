@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, ChevronRight, Stethoscope } from "lucide-react";
+import TreatmentCard from "../components/ui/TreatmentCard";
 import teethCleaning from "../assets/treatments/Teeth-Cleaning.png";
 import toothFilling from "../assets/treatments/Tooth-Filling.jpg";
 import toothExct from "../assets/treatments/toothExct.png";
@@ -255,130 +256,11 @@ const Hero = () => (
 
 // ─── TREATMENT CARD ──────────────────────────────────────────────────────────
 
-const TreatmentCard = ({ treatment, onClick }) => {
-  const { icon, title, img, short, duration } = treatment;
-
-  return (
-    <div
-      onClick={() => onClick(treatment)}
-      className="group bg-white border border-slate-200 rounded-2xl overflow-hidden cursor-pointer
-                 hover:border-[#3B82C4] hover:shadow-xl hover:shadow-blue-100
-                 transition-all duration-300 flex flex-col"
-    >
-      {/* ── Image ─────────────────────────────────────── */}
-      <div className="w-full h-48 overflow-hidden bg-[#EBF3FC] shrink-0">
-        <img
-          src={img}
-          alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-      </div>
-
-      {/* ── Content ───────────────────────────────────── */}
-      <div className="flex flex-col gap-3 p-5 flex-1">
-        {/* title + desc */}
-        <div>
-          <h3 className="font-semibold text-[#1A2744] text-base mb-1.5 group-hover:text-[#3B82C4] transition-colors leading-snug">
-            {title}
-          </h3>
-          <p className="text-slate-400 text-sm leading-relaxed line-clamp-2">
-            {short}
-          </p>
-        </div>
-
-        {/* spacer */}
-        <div className="flex-1" />
-
-        {/* meta + arrow */}
-        <div className="flex items-center justify-between pt-3 border-t border-slate-100">
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-slate-400 bg-slate-50 border border-slate-100 rounded-full px-3 py-1">
-              ⏱ {duration}
-            </span>
-          </div>
-          <span className="text-xs text-[#3B82C4] font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-            Learn more ›
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// ─── MODAL ───────────────────────────────────────────────────────────────────
-
-const Modal = ({ treatment, onClose }) => {
-  if (!treatment) return null;
-
-  return (
-    <div
-      className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4"
-      onClick={onClose}
-    >
-      <div
-        className="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* close */}
-        <button
-          onClick={onClose}
-          className="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-500 text-sm transition-colors"
-        >
-          ✕
-        </button>
-
-        {/* icon + tag */}
-        <div className="flex items-center gap-4 mb-5">
-          <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-[#EBF3FC] to-[#F0EAFC] flex items-center justify-center text-3xl shadow-sm">
-            {treatment.icon}
-          </div>
-          <div>
-            <span
-              className={`text-[11px] font-semibold px-3 py-1 rounded-full ${treatment.tagColor}`}
-            >
-              {treatment.tag}
-            </span>
-            <h2 className="font-serif text-xl font-bold text-[#1A2744] mt-1.5">
-              {treatment.title}
-            </h2>
-          </div>
-        </div>
-
-        {/* description */}
-        <p className="text-slate-500 text-sm leading-relaxed mb-6">
-          {treatment.description}
-        </p>
-
-        {/* meta grid */}
-        <div className="grid grid-cols-3 gap-3 mb-6">
-          {[
-            { label: "Category", value: treatment.category },
-            { label: "Duration", value: treatment.duration },
-            { label: "Sessions", value: treatment.sessions },
-          ].map(({ label, value }) => (
-            <div
-              key={label}
-              className="bg-[#F8FAFF] border border-slate-100 rounded-xl p-3 text-center"
-            >
-              <span className="block text-[10px] text-slate-400 uppercase tracking-wider mb-1">
-                {label}
-              </span>
-              <span className="text-xs font-semibold text-[#1A2744]">
-                {value}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <button className="w-full bg-linear-to-r from-[#3B82C4] to-[#5BA4E0] text-white font-semibold py-3.5 rounded-2xl hover:shadow-lg hover:shadow-blue-200 transition-shadow flex items-center justify-center gap-2">
-          Book this Treatment
-          <ArrowRight size={16} />
-        </button>
-      </div>
-    </div>
-  );
-};
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {treatments.map((treatment) => (
+    <TreatmentCard key={treatment.id} treatment={treatment} />
+  ))}
+</div>;
 
 // ─── CTA BANNER ──────────────────────────────────────────────────────────────
 
@@ -411,7 +293,6 @@ const CTABanner = () => (
 
 const TreatmentsPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedTreatment, setSelectedTreatment] = useState(null);
 
   const filtered =
     activeCategory === "All"
@@ -426,23 +307,11 @@ const TreatmentsPage = () => {
       <main className="max-w-6xl mx-auto px-12 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((t) => (
-            <TreatmentCard
-              key={t.id}
-              treatment={t}
-              onClick={setSelectedTreatment}
-            />
+            <TreatmentCard key={t.id} treatment={t} />
           ))}
         </div>
       </main>
-
       <CTABanner />
-      {/* <Footer /> */}
-
-      {/* Modal */}
-      <Modal
-        treatment={selectedTreatment}
-        onClose={() => setSelectedTreatment(null)}
-      />
     </div>
   );
 };

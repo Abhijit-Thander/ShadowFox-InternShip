@@ -2,13 +2,6 @@ import { useState } from "react";
 import { ArrowRight, Award, Heart, Users, Microscope } from "lucide-react";
 import Doctor from "../assets/avatar-female.jpg";
 
-// ─── BRAND COLORS ────────────────────────────────────────────────────────────
-// Primary Blue  : #1B4FBE  (logo royal blue)
-// Primary Red   : #C0161B  (logo deep red)
-// Blue Light BG : #EBF0FC
-// Red Light BG  : #FEF0F0
-// Dark Navy     : #1A2744
-
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const team = [

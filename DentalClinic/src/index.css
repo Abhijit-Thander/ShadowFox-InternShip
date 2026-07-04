@@ -1,2 +1,15 @@
+/* @import "lenis/dist/lenis.css"; */
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
 @import "tailwindcss";
-@import "lenis/dist/lenis.css";

@@ -23,7 +23,7 @@ const sections = [
               key={item}
               className="flex items-start gap-2.5 text-sm text-slate-500"
             >
-              <span className="mt-1 w-1.5 h-1.5 rounded-full bg-[#3B82C4] shrink-0" />
+              <span className="mt-1 w-1.5 h-1.5 rounded-full bg-[#1B4FBE] shrink-0" />
               {item}
             </li>
           ))}
@@ -36,7 +36,7 @@ const sections = [
           {["Name", "Email address", "Phone number"].map((tag) => (
             <span
               key={tag}
-              className="text-xs font-semibold bg-[#EBF3FC] text-[#3B82C4] px-3 py-1.5 rounded-full"
+              className="text-xs font-semibold bg-[#EBF3FC] text-[#1B4FBE] px-3 py-1.5 rounded-full"
             >
               {tag}
             </span>
@@ -64,7 +64,7 @@ const sections = [
               key={item}
               className="flex items-start gap-2.5 text-sm text-slate-500"
             >
-              <span className="mt-1 w-1.5 h-1.5 rounded-full bg-[#E07AA0] shrink-0" />
+              <span className="mt-1 w-1.5 h-1.5 rounded-full bg-[#C0161B] shrink-0" />
               {item}
             </li>
           ))}
@@ -123,7 +123,7 @@ const sections = [
               key={label}
               className="flex items-start gap-3 bg-[#F8FAFF] border border-slate-100 rounded-xl px-4 py-3"
             >
-              <span className="mt-1 w-2 h-2 rounded-full bg-[#3B82C4] shrink-0" />
+              <span className="mt-1 w-2 h-2 rounded-full bg-[#1B4FBE] shrink-0" />
               <div>
                 <p className="text-sm font-semibold text-[#1A2744]">{label}</p>
                 <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">
@@ -242,11 +242,11 @@ const sections = [
 
 const Hero = () => (
   <section className="bg-linear-to-br from-[#EBF3FC] via-[#F8FAFF] to-[#FDF0F5] py-16 text-center px-6">
-    <span className="inline-block text-xs font-semibold tracking-[2.5px] uppercase text-[#E07AA0] mb-3">
+    <span className="inline-block text-xs font-semibold tracking-[2.5px] uppercase text-[#C0161B] mb-3">
       Legal
     </span>
     <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#1A2744] leading-tight mb-4">
-      Privacy <span className="text-[#3B82C4]">Policy</span>
+      Privacy <span className="text-[#1B4FBE]">Policy</span>
     </h1>
     <p className="text-slate-500 text-base max-w-md mx-auto leading-relaxed mb-6">
       At Sakthi Dental Clinic, we are committed to protecting your privacy. This
@@ -313,13 +313,13 @@ const BottomStrip = () => (
     <div className="flex flex-wrap gap-3 justify-center mt-5">
       <a
         href="/contact"
-        className="bg-linear-to-r from-[#3B82C4] to-[#5BA4E0] text-white text-sm font-semibold px-6 py-2.5 rounded-full shadow-md shadow-blue-200 hover:shadow-lg transition-shadow"
+        className="bg-linear-to-r from-[#1B4FBE] to-[#5BA4E0] text-white text-sm font-semibold px-6 py-2.5 rounded-full shadow-md shadow-blue-200 hover:shadow-lg transition-shadow"
       >
         Contact Us
       </a>
       <a
         href="/"
-        className="bg-white border border-slate-200 text-[#1A2744] text-sm font-semibold px-6 py-2.5 rounded-full hover:border-[#3B82C4] transition-colors"
+        className="bg-white border border-slate-200 text-[#1A2744] text-sm font-semibold px-6 py-2.5 rounded-full hover:border-[#1B4FBE] transition-colors"
       >
         Back to Home
       </a>

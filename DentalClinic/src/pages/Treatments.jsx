@@ -5,7 +5,7 @@ import teethCleaning from "../assets/treatments/Teeth-Cleaning.png";
 import toothFilling from "../assets/treatments/Tooth-Filling.jpg";
 import toothExct from "../assets/treatments/toothExct.png";
 import acd from "../assets/treatments/acd.png";
-import dentalImp from "../assets/treatments/impants.png";
+import dentalImp from "../assets/treatments/Impants.png";
 import laserDen from "../assets/treatments/Laser-Surgery.png";
 import rootCanel from "../assets/treatments/RootCanel.png";
 import wishDom from "../assets/treatments/wishDom.png";
@@ -13,7 +13,7 @@ import fpd from "../assets/treatments/fpd.png";
 import tWhitening from "../assets/treatments/Bleaching.png";
 import veneer from "../assets/treatments/Veneer.jpg";
 import pd from "../assets/treatments/Pediatric-dentistry.png";
-import flap from "../assets/treatments/Flap-Surgery.png";
+import flap from "../assets/treatments/Flap-surgery.png";
 import orthodontic from "../assets/treatments/Orthodonic.png";
 import aligners from "../assets/treatments/Aligner.png";
 

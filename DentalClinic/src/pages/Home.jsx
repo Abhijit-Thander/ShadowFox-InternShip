@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Link } from "react-router";
-import iconDoctor from "../assets/AmenitiesIcon/icon-doctors.png";
-import wheelChair from "../assets/AmenitiesIcon/icon-wheel-chair.png";
-import parking from "../assets/AmenitiesIcon/icon-parking.png";
-import pickup from "../assets/AmenitiesIcon/icon-pickup.png";
-import cityCenter from "../assets/AmenitiesIcon/icon-city-center.png";
+import iconDoctor from "../assets/AmenitiesIcon/Icon-doctors.png";
+import wheelChair from "../assets/AmenitiesIcon/Icon-wheel-chair.png";
+import parking from "../assets/AmenitiesIcon/Icon-parking.png";
+import pickup from "../assets/AmenitiesIcon/Icon-pickup.png";
+import cityCenter from "../assets/AmenitiesIcon/Icon-city-center.png";
 import heroImage from "../assets/Banner1.jpg";
 
 // ─── BRAND COLORS ────────────────────────────────────────────────────────────
